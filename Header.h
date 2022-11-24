@@ -1,5 +1,5 @@
 ﻿#pragma once
-//25
+//29
 int digitCount(int k) {
 	int n = 0;
 	while (k > 0) {

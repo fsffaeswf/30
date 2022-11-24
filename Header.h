@@ -1,23 +1,27 @@
-﻿#pragma once
-//29
-int digitCount(int k) {
-	int n = 0;
-	while (k > 0) {
-		n++;
-		k = k / 10;
+#pragma once
+bool isprime(int n) {
+	int i = 2, k = 0;
+	while (n / 2 >= i) {
+		if (n % i == 0) {
+			k++;
+		}
+		i++;
 	}
-	return n;
+	bool m = k == 0;
+	return m;
 }
-//30 решить потом
 int digitN(int K, int N) {
-	int n = 0,k1;
-	while (n == k1) {
+	int n = 0, k1{};
+	while (K>0) {
 		k1 = K % 10;
 		K = K / 10;
 		n++;
+		if (N == n) {
+			return k1;
+		}
 	}
-	if (N > n) {
 		return -1;
+	
+	
 	}
-}
-
+	

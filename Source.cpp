@@ -1,18 +1,31 @@
-﻿#include <iostream>
-#include "Header.h"
-#include <ctime>
+#include <iostream>
 using namespace std;
+bool isSquare(int);
 int main() {
-	const int N = 5;
+	const int N = 10;
 	int arr[N], k = 0;
 	srand(time(nullptr));
 	for (int i = 0; i < 10; i++) {
-		arr[i] = rand() % 1000;
+		arr[i] = rand() % 26;
 		cout << arr[i] << ' ';
 	}
 	cout << endl;
-	/*29
 	for (int i = 0; i < 10; i++) {
-		cout << i << ":" << digitCount(arr[i]) << ' ';
-	}*/
+		if (isSquare(arr[i]) == 1) {
+			k++;
+		}
+	}
+	cout << endl << k;
+}
+bool isSquare(int k) {
+	int i = 0;
+	while (k  >= i)
+	{
+		if (i*i==k) {
+			return true;
+		}
+		i++;
+	}
+	
+	return false;
 }
